@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timetable Clash Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Course Timetable Clash Detector</h1>
+      <p class="subtitle">Check semester course schedules against each other to instantly detect overlapping time slots.</p>
+    </header>
+
+    <main>
+      <section class="card form-section">
+        <h2>Add Course Slot</h2>
+        <form id="course-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="course-name">Course Title</label>
+              <input type="text" id="course-name" placeholder="e.g., Operating Systems" required>
+            </div>
+            <div class="form-group">
+              <label for="day-select">Day</label>
+              <select id="day-select" required>
+                <option value="">Select Day</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="start-time">Start Time</label>
+              <input type="time" id="start-time" required>
+            </div>
+            <div class="form-group">
+              <label for="end-time">End Time</label>
+              <input type="time" id="end-time" required>
+            </div>
+          </div>
+
+          <div id="form-error" class="alert-box alert-error" hidden></div>
+          <button type="submit" class="btn btn-primary">Add Course</button>
+        </form>
+      </section>
+
+      <section class="schedule-section">
+        <div class="section-header">
+          <h2>Registered Schedule</h2>
+          <button id="clear-all-btn" class="btn btn-secondary" hidden>Clear All</button>
+        </div>
+
+        <div id="conflict-banner" class="alert-box alert-warning" hidden></div>
+
+        <div id="empty-state" class="state-card">
+          <div class="icon">📅</div>
+          <h3>No courses registered yet</h3>
+          <p>Add your lecture times above to automatically check for timetable overlaps before semester enrollment.</p>
+        </div>
+
+        <div id="schedule-list" class="schedule-grid" hidden></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
