@@ -54,3 +54,4 @@ If using VS Code:
 * **What it costs & Why it proved awkward:** 
   * Overlap math (`startA < endB && endA > startB`) directly on string comparisons required strict string zero-padding and broke down whenever handling flexible time boundaries or overnight edge cases.
   * Comparing durations, rendering dynamic multi-hour blocks visually on a schedule grid, and formatting 12-hour/24-hour conversions later required frequent on-the-fly conversion logic scattered across UI functions, making the time calculation logic far messier than if stored as integer minute offsets from midnight from day one.
+<!-- input validation updated -->
