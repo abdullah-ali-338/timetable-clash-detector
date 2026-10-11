@@ -1,12 +1,9 @@
 # 📅 Timetable Clash Detector
 
-![Vercel Deployment](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![License](https://img.shields.io/badge/License-Personal_Use-blue?style=for-the-badge)
 ![Tech Stack](https://img.shields.io/badge/Stack-HTML5_%7C_CSS3_%7C_JS-orange?style=for-the-badge)
 
 A responsive client-side web application designed to help university students detect and prevent overlapping class schedules during course registration.
-
-🌐 **Live Demo:** [timetable-clash-detector.vercel.app](https://timetable-clash-detector.vercel.app/)
 
 ---
 
@@ -23,7 +20,6 @@ A responsive client-side web application designed to help university students de
 
 - **Frontend:** HTML5, CSS3, Vanilla JavaScript (ES6+)
 - **Storage:** Web Storage API (LocalStorage)
-- **Hosting & Deployment:** Vercel Static Hosting
 
 ---
 
@@ -32,6 +28,6 @@ A responsive client-side web application designed to help university students de
 ```text
 TimetableClashDetector/
 ├── index.html          # Core single-file application interface
-├── script.js            # Clash validation logic and DOM state handler
+├── script.js           # Clash validation logic and DOM state handler
 ├── style.css           # Custom layout and styling rules
 └── README.md           # Project documentation
